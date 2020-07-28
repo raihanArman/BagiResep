@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BagiResep App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="generate_total_user_rating">( %s )</string>
+    <string name="generate_jumlah_like">%s suka</string>
+    <string name="generate_jumlah_komentar">%s komentar</string>
+    <string name="generate_nama_user">Hai %s</string>
+    <string name="generate_waktu_masak">%s menit</string>
+    <string name="generate_langkah">%s langkah</string>
+    <string name="generate_kategori"><b>Kategori</b> : %s</string>
+    <string name="generate_resep_lainnya">Resep lainnya oleh %s</string>
+    <string name="generate_peringatan_rencana">Apakah anda yakin ingin menghapus <b>%s</b> dari rencana ?</string>
+</resources>

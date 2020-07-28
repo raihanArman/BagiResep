@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="kategori"
+            type="id.co.myproject.bagiresepapp.data.remote.model.Kategori" />
+    </data>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:imageUrl="@{kategori.gambar}"
+            />
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="@{kategori.nama_kategori}"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+</layout>

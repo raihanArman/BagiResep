@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="resep"
+            type="id.co.myproject.bagiresepapp.data.remote.model.Resep" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MyResepFragment">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/layout_kas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView5">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_daftar_rencana"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Rencana"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/nunito_semibold"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_rencana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_rencana"
+                        tools:itemCount="1"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/tv_koleksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daftar Resep"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorAccent"
+                            android:fontFamily="@font/nunito_semibold"/>
+                        <TextView
+                            android:id="@+id/tv_ket"
+                            android:layout_below="@id/tv_koleksi"
+                            android:text="Masakan akan dibagikan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_tambah_resep"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/tv_ket"
+                            app:cardCornerRadius="8dp"
+                            android:layout_width="100dp"
+                            android:elevation="5dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_add_black_24dp"/>
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="12sp"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tambah Resep"
+                                    android:textColor="@color/colorAccent"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/iv_lainnya"
+                            android:layout_alignBaseline="@id/tv_koleksi"
+                            android:src="@drawable/ic_navigate_next_black_24dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="invisible"
+                            android:layout_alignParentRight="true"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_resep_saya"
+                            android:layout_toRightOf="@id/btn_tambah_resep"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/tv_ket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lv_sudah_buat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resep yang sudah dibuat"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorAccent"
+                            android:fontFamily="@font/nunito_semibold"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_sudah_buat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/item_resep_2"
+                            tools:itemCount="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_sedang_buat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/layout_kas"
+                android:backgroundTint="#E94CAF50"
+                android:padding="8dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/cv_resep"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="8dp">
+                    <ImageView
+                        app:imageUrl="@{resep.gambar}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_toRightOf="@id/cv_resep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{resep.resep}"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/nunito_semibold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sedang dibuat !!!"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nunito_semibold"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Resep Saya"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

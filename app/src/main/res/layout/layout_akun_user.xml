@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="profil"
+            type="id.co.myproject.bagiresepapp.data.remote.model.Resep" />
+    </data>
+    <LinearLayout
+        android:id="@+id/lv_profil"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo"
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:imageUrl="@{profil.gambar_user}"/>
+        <TextView
+            android:text="Di publish oleh"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_username_user"
+            android:text="@{profil.nama_user}"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/tv_ikuti_user"
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_white_retangled"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Ikuti"
+            android:textSize="15sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/rv_resep_lainnya"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+</layout>
