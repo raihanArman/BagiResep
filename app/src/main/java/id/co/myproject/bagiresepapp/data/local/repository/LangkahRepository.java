@@ -20,7 +20,7 @@ public class LangkahRepository {
         databaseDao = appDatabase.databaseDao();
     }
 
-    public Single<List<LangkahEntity>> getLangkahList(){
+    public List<LangkahEntity> getLangkahList(){
         return databaseDao.getLangkah();
     }
 

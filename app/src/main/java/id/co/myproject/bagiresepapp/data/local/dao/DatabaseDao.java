@@ -54,7 +54,7 @@ public interface DatabaseDao {
 
 //    Bahan
     @Query("SELECT * FROM tb_bahan")
-    Single<List<BahanEntity>> getBahan();
+    List<BahanEntity> getBahan();
 
     @Query("UPDATE tb_bahan SET bahan = :bahan WHERE id = :idBahan")
     void updateBahan(int idBahan, String bahan);
@@ -83,7 +83,7 @@ public interface DatabaseDao {
 
 //    Langkah
     @Query("SELECT * FROM tb_langkah")
-    Single<List<LangkahEntity>> getLangkah();
+    List<LangkahEntity> getLangkah();
 
     @Query("UPDATE tb_langkah SET langkah = :langkah WHERE id = :idLangkah")
     void updateLangkah(int idLangkah, String langkah);

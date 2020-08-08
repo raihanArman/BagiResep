@@ -50,8 +50,8 @@ public class AddResepViewModel extends AndroidViewModel {
     private MutableLiveData<List<BahanEntity>> bahanMutable = new MutableLiveData<>();
     private MutableLiveData<List<LangkahEntity>> langkahMutable = new MutableLiveData<>();
     private MutableLiveData<Value> inputResepMutable = new MutableLiveData<>();
-    private MutableLiveData<Value> inputBahanMutable = new MutableLiveData<>();
-    private MutableLiveData<Value> inputLangkahMutable = new MutableLiveData<>();
+    private LiveData<Value> inputBahanMutable = new MutableLiveData<>();
+    private LiveData<Value> inputLangkahMutable = new MutableLiveData<>();
     private MutableLiveData<Value> inputLangkahGambarMutable = new MutableLiveData<>();
 
     Context context;
@@ -82,16 +82,7 @@ public class AddResepViewModel extends AndroidViewModel {
 
     public MutableLiveData<List<BahanEntity>> getBahanMutable(){
         showLoading.setValue(true);
-        disposable.add(bahanRepository.getBahanList()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(bahanEntities -> {
-                    showLoading.setValue(false);
-                    bahanMutable.postValue(bahanEntities);
-                }, throwable -> {
-                    showLoading.setValue(false);
-                    errorMessage.setValue(throwable.getMessage());
-                }));
+        bahanMutable.setValue(bahanRepository.getBahanList());
         return bahanMutable;
     }
 
@@ -134,16 +125,7 @@ public class AddResepViewModel extends AndroidViewModel {
 //    Langkah
     public MutableLiveData<List<LangkahEntity>> getLangkahMutable(){
         showLoading.setValue(true);
-        disposable.add(langkahRepository.getLangkahList()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(langkahEntities -> {
-                    showLoading.setValue(false);
-                    langkahMutable.postValue(langkahEntities);
-                }, throwable -> {
-                    showLoading.setValue(false);
-                    errorMessage.setValue(throwable.getMessage());
-                }));
+        langkahMutable.setValue(langkahRepository.getLangkahList());
         return langkahMutable;
     }
 
@@ -176,14 +158,14 @@ public class AddResepViewModel extends AndroidViewModel {
         langkahRepository.removeLangkahGambarByIdLangkah(idLangkah);
     }
 
-    public MutableLiveData<Value> getInputResepMutable(Resep resep){
+    public LiveData<Value> getInputResepMutable(Resep resep){
         showLoading.setValue(true);
         addResepRepository.inputResepRequest(resep)
                 .enqueue(new Callback<Value>() {
                     @Override
                     public void onResponse(Call<Value> call, Response<Value> response) {
                         showLoading.setValue(false);
-                        inputResepMutable.setValue(response.body());
+                        inputResepMutable.postValue(response.body());
                     }
 
                     @Override
@@ -194,39 +176,12 @@ public class AddResepViewModel extends AndroidViewModel {
         return inputResepMutable;
     }
 
-    public MutableLiveData<Value> getInputBahanMutable(Bahan bahan){
-        showLoading.setValue(true);
-        addResepRepository.inputBahanRequest(bahan)
-                .enqueue(new Callback<Value>() {
-                    @Override
-                    public void onResponse(Call<Value> call, Response<Value> response) {
-                        showLoading.setValue(false);
-                        inputBahanMutable.setValue(response.body());
-                    }
-
-                    @Override
-                    public void onFailure(Call<Value> call, Throwable t) {
-                        errorMessage.setValue(t.getMessage());
-                    }
-                });
-        return inputBahanMutable;
+    public void getInputBahanMutable(Bahan bahan){
+        inputBahanMutable = addResepRepository.inputBahanRequest(bahan);
     }
 
-    public MutableLiveData<Value> getInputLangkahMutable(Steps steps){
-        showLoading.setValue(true);
-        addResepRepository.inputLangkahRequest(steps)
-                .enqueue(new Callback<Value>() {
-                    @Override
-                    public void onResponse(Call<Value> call, Response<Value> response) {
-                        inputLangkahMutable.setValue(response.body());
-                    }
-
-                    @Override
-                    public void onFailure(Call<Value> call, Throwable t) {
-
-                    }
-                });
-        return inputLangkahMutable;
+    public void getInputLangkahMutable(Steps steps){
+        inputLangkahMutable = addResepRepository.inputLangkahRequest(steps);
     }
 
     public MutableLiveData<Value> getInputLangkahGambarMutable(LangkahGambarEntity langkahGambarEntity){

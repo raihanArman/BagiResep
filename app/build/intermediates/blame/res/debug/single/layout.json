@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_comment.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\layout_comment.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_bahan.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_bahan.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_bahan_input.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_bahan_input.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_resep.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\activity_detail_resep.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_rencana.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_rencana.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_resep.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_my_resep.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_langkah_input.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_langkah_input.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_komentar.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_komentar.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_up.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_sign_up.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_langkah_gambar_input.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_langkah_gambar_input.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forgot_pass.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_forgot_pass.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_resep_home.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_resep_home.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_spinner.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_spinner.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forgot_pass_dialog.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_forgot_pass_dialog.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_bahan_input.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\layout_bahan_input.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favorite.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_favorite.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_bahan_gambar_input.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_bahan_gambar_input.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_steps.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_steps.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_feedback.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\dialog_feedback.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_resep_popular.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_resep_popular.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\fragment_chat.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_kategori.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_kategori.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_resep_2.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\item_resep_2.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_resep.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\activity_add_resep.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_peringatan.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\dialog_peringatan.xml"
+    },
+    {
+        "merged": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_akun_user.xml",
+        "source": "D:\\Programming\\Android\\Project Android\\BagiResepApp\\app\\src\\main\\res\\layout\\layout_akun_user.xml"
+    }
+]

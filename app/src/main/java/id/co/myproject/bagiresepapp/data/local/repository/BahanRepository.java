@@ -19,7 +19,7 @@ public class BahanRepository {
         databaseDao = appDatabase.databaseDao();
     }
 
-    public Single<List<BahanEntity>> getBahanList(){
+    public List<BahanEntity> getBahanList(){
         return databaseDao.getBahan();
     }
 

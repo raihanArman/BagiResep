@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                  
+                                                               
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.AddResepActivity" android:tag="layout/activity_add_resep_0" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_menu_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <ImageView
+                    android:id="@+id/iv_resep"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout
+                    android:id="@+id/layout_btn_add_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#e7e7e7"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_camera_alt_black_24dp"
+                        android:tint="#848484"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tambahkan Gambar"
+                        android:fontFamily="@font/nunito_semibold"/>
+                </LinearLayout>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_ganti_gambar"
+                    android:background="@drawable/bg_button_tambah_keranjang"
+                    android:text="Ganti gambar"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/layout_btn_add_image"
+                    android:layout_margin="16dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                    <TextView
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Kategori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Spinner
+                        android:id="@+id/sp_kategori"
+                        android:padding="8dp"
+                        android:hint="Pilih kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Spinner>
+                    <TextView
+                        android:textSize="15sp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Judul resep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et_resep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input"
+                        android:padding="15dp"/>
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/et_deskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/bg_input"
+                        android:inputType="text|textMultiLine"
+                        android:padding="15dp"
+                        android:gravity="top"/>
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Bahan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rv_bahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/lv_tambah_bahan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_button_coklat"
+                        android:backgroundTint="@color/colorError"
+                        android:padding="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_add_black_24dp"
+                            android:tint="@android:color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tambah Bahan"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/white"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Langkah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rv_langkah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/lv_tambah_langkah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_button_coklat"
+                        android:backgroundTint="@color/colorError"
+                        android:padding="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_add_black_24dp"
+                            android:tint="@android:color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tambah Step"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/white"
+                            />
+                    </LinearLayout>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Waktu Masak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.jaygoo.widget.RangeSeekBar
+                        android:id="@+id/seekbar_waktu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rsb_indicator_height="10dp"
+                        app:rsb_indicator_width="10dp"
+                        app:rsb_max="120"
+                        app:rsb_min="15"
+                        app:rsb_mode="single"
+                        app:rsb_thumb_height="40dp"
+                        app:rsb_thumb_width="40dp"
+                        app:rsb_tick_mark_mode="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120 min"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/seekbar_waktu" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15 min"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/seekbar_waktu" />
+
+                    <TextView
+                        android:id="@+id/tv_waktu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="127 min"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/btn_publish"
+                        android:background="@drawable/bg_button_coklat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Terbitkan"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#4CAF50"
+                        android:drawableStart="@drawable/ic_publish_black_24dp"
+                        android:drawablePadding="4dp"
+                        android:clickable="true"
+                        android:padding="7dp"
+                        android:textSize="15sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+         

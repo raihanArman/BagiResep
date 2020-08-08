@@ -80,6 +80,8 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
     LangkahInputAdapter langkahInputAdapter;
 
 
+    boolean inputBahan = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -231,6 +233,7 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
         resep.setGambar(imageThumbs);
         resep.setDeksripsi(binding.etDeskripsi.getText().toString());
         resep.setWaktuMasak(String.valueOf((int)binding.seekbarWaktu.getLeftSeekBar().getProgress()));
+
         viewModel.getInputResepMutable(resep)
                 .observe(this, new Observer<Value>() {
                     @Override
@@ -249,19 +252,10 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
                                                     bahan.setBahan(bahanEntities.get(i).getBahan());
                                                     bahan.setKet(String.valueOf(ket));
                                                     ket++;
-                                                    viewModel.getInputBahanMutable(bahan)
-                                                            .observe(AddResepActivity.this, new Observer<Value>() {
-                                                                @Override
-                                                                public void onChanged(Value value) {
-                                                                    if (value.getValue() == 1){
-                                                                        Toast.makeText(AddResepActivity.this, "Jalan jalan", Toast.LENGTH_SHORT).show();
-                                                                    }
-                                                                    viewModel.getInputBahanMutable(bahan).removeObserver(this);
-                                                                    Log.d(TAG, "Input : "+value.getMessage());
-                                                                }
-                                                            });
+                                                    viewModel.getInputBahanMutable(bahan);
+
                                                     Log.d(TAG, "Langkah resep : "+i);
-                                                    Toast.makeText(AddResepActivity.this, "bahan : "+i, Toast.LENGTH_SHORT).show();
+
                                                 }
                                                 viewModel.getBahanMutable().removeObserver(this);
                                                 deleteBahan();
@@ -278,20 +272,9 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
                                                                         steps.setLangkah(langkahEntities.get(i).getLangkah());
                                                                         steps.setKet(String.valueOf(ketLangkah));
                                                                         ketLangkah++;
-                                                                        viewModel.getInputLangkahMutable(steps).removeObservers(AddResepActivity.this);
-                                                                        viewModel.getInputLangkahMutable(steps)
-                                                                                .observe(AddResepActivity.this, new Observer<Value>() {
-                                                                                    @Override
-                                                                                    public void onChanged(Value value) {
-                                                                                        if (value.getValue() == 1){
-                                                                                        }
-                                                                                        Log.d(TAG, "Input : "+value.getMessage());
-                                                                                        viewModel.getInputLangkahMutable(steps).removeObserver(this);
-                                                                                        finish();
-                                                                                    }
-                                                                                });
+                                                                        viewModel.getInputLangkahMutable(steps);
                                                                         Log.d(TAG, "Langkah resep : "+i);
-                                                                        Toast.makeText(AddResepActivity.this, "Langkah : "+i, Toast.LENGTH_SHORT).show();
+
                                                                     }
                                                                     viewModel.getLangkahMutable().removeObserver(this);
                                                                     deleteLangkah();
@@ -300,6 +283,8 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
                                                                 }
                                                             }
                                                         });
+
+                                                finish();
                                             }
                                         }
                                     });
@@ -482,6 +467,20 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
         Toast.makeText(this, ""+result, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        deleteLangkah();
+        deleteBahan();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        deleteLangkah();
+        deleteBahan();
+    }
+
     private class LoadBitmapConvertAsync extends AsyncTask<Void, Void, String>{
         private WeakReference<Context> weakContext;
         ConvertBitmap convertBitmap;
@@ -512,4 +511,12 @@ public class AddResepActivity extends AppCompatActivity implements BahanListener
             convertBitmap.bitmapToString(s);
         }
     }
+
+
+
+
+
+
+
+
 }
